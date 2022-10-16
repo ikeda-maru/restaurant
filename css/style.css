@@ -64,25 +64,25 @@ h1 {
   padding: 0 4%;
 }
 
-/* HOME */
-.home-content {
-  text-align: center;
-  margin-top: 10%;
-}
-
-.home-content p {
-  font-size: 1.125rem;
-  color: #e6e6e6;
-  margin: 10px 0 42px;
+/* 大きな背景画像 */
+.big-bg {
+  background-size: cover;
+  background-position: center top;
 }
 
 /* 見出し */
 .page-title {
   font-size: 5rem;
   font-family: 'Philosoper', serif;
-  text-transform: uppercase;
   font-weight: normal;
   color: #e6e6e6;
+}
+
+.sub-title {
+  font-size: 1.375rem;
+  padding: 0 8px 8px;
+  border-bottom: 2px #e05657 solid;
+  font-weight: normal;
 }
 
 /* ボタン */
@@ -95,13 +95,24 @@ h1 {
 }
 
 .button:hover {
-  opacity: .9;
+  opacity: .8;
 }
 
-/* 大きな背景画像 */
-.big-bg {
-  background-size: cover;
-  background-position: center top;
+/* iframe */
+iframe {
+  width: 100%;
+}
+
+/* HOME */
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.home-content p {
+  font-size: 1.125rem;
+  color: #e6e6e6;
+  margin: 10px 0 42px;
 }
 
 #home {
@@ -204,13 +215,6 @@ article p {
   margin-bottom: 1rem;
 }
 
-.sub-title {
-  font-size: 1.375rem;
-  padding: 0 8px 8px;
-  border-bottom: 2px #e05657 solid;
-  font-weight: normal;
-}
-
 aside p {
   padding: 12px 10px;
 }
@@ -261,24 +265,28 @@ aside p {
   display: grid;
   gap: 26px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: repeat(3, 240px);
+  justify-items: center;
+  align-items: center;
   margin-top: 6%;
   margin-bottom: 50px;
 }
 
-.big-box {
-  grid-column: 1 / 3;
-  grid-row: 1 / 3;
+.grid .item {
+  margin: 6px;
 }
 
-.big-box img {
-  height: 94%;
-  width: 100%;
+.grid img {
+  width: 300px;
+  height: 200px;
   object-fit: cover;
 }
 
 /* CONTACT */
 #contact {
   background-image: url(../images/contact-bg.jpg);
+  background-color: #44332285;
+  background-blend-mode: darken;
   min-height: 100vh;
 }
 
@@ -287,6 +295,7 @@ form div {
 }
 label {
   font-size: 1.125rem;
+  color: #e6e6e6;
   margin-bottom: 10px;
   display: block;
 }
@@ -339,11 +348,6 @@ input[type="submit"] {
 
 .location-map {
   width: 74%;
-}
-
-/* iframe */
-iframe {
-  width: 100%;
 }
 
 /* SNS */
@@ -431,11 +435,6 @@ iframe {
   .post-cat {
     font-size: 0.875rem;
     margin-top: 10px;
-  }
-
-  .post-title,
-  .post-cat {
-    margin-left: 80px;
   }
 
   /* MENU */
